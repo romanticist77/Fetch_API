@@ -24,7 +24,7 @@ export default function Shop() {
       <ul className="px-6 py-4">
         {items &&
           items.map((item) => (
-            <li key="items.length">
+            <li key="items.id">
               <Item className="" info={item} />
             </li>
           ))}
