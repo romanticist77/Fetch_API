@@ -4,7 +4,6 @@ export default function Item(props) {
   const [total, setTotal] = useState(0);
 
   const { ...info } = props.info;
-  console.log(info);
 
   function handleAddClick() {
     setTotal(total + 1);
