@@ -6,7 +6,7 @@ function App() {
 
   if (login) {
     return (
-      <div className="flex flex-col content-center max-w-xs">
+      <div className="flex flex-col content-center max-w-xs min-w-[20rem] ">
         <Shop setLogin={setLogin}/>
       </div>
     );
