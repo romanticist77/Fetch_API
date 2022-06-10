@@ -7,10 +7,7 @@ function App() {
   if (login) {
     return (
       <div className="flex flex-col content-center max-w-xs">
-        <Shop />
-        <button className="btn h-10 mx-6 my-4 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 font-semibold" onClick={() => setLogin(false)}>
-          Выйти
-        </button>
+        <Shop setLogin={setLogin}/>
       </div>
     );
   } else {

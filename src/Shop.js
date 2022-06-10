@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import Item from "./Item";
 import Loader from "./Loader"
 
-export default function Shop() {
+export default function Shop(props) {
   const [items, setItems] = useState([]);
   const [loader, setLoader] = useState(false);
+
+  const {setLogin} = props;
+  console.log(setLogin)
 
   useEffect(() => {
     (async () => {
@@ -35,6 +38,11 @@ export default function Shop() {
             </li>
           ))}
       </ul>
+      <div className="px-6 py-4">
+      <button className="w-full h-10 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 font-semibold" onClick={() => setLogin(false)}>
+          Выйти
+        </button>
+      </div>
     </div>
     </>
   );
